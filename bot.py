@@ -2,6 +2,17 @@ import time
 import requests
 from colorama import Style
 from datetime import datetime
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Instagram bot is running!"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
+
 
 BOLD=Style.BRIGHT
 RESET=Style.RESET_ALL
